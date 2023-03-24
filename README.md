@@ -1,4 +1,4 @@
-# week4_laptrinhdidong
+# week6_laptrinhdidong
 
 ### Tô Minh Vũ - 19207120
 ### Lý Hoàng Thiên - 19207105
