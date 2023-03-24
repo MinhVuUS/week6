@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
 <variable
-    name="restaurantData"
-    type="com.example.week2.singleonData.Restaurant" />
+    name="movieData"
+    type="com.example.week2.model.Movie" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/restaurant_layout"
-
+        android:clickable="true"
+        android:focusable="true"
         app:cardBackgroundColor="@color/organge"
-        app:cardCornerRadius="45dp"
+        app:cardCornerRadius="30dp"
         app:cardElevation="3dp"
         app:contentPadding="4dp"
         android:layout_margin="10dp">
@@ -27,7 +28,7 @@
 
             <ImageView
 
-                android:id="@+id/restaurant_avt"
+                android:id="@+id/restaurantAvt"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -35,29 +36,29 @@
                 tools:srcCompat="@tools:sample/avatars"/>
 
             <TextView
-                android:id="@+id/restaurant_name"
+                android:id="@+id/restaurantName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="@{restaurantData.resName}"
+                android:text="@{movieData.title.trim()}"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@+id/restaurant_avt"
+                app:layout_constraintLeft_toRightOf="@+id/restaurantAvt"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/restaurant_address"
+                android:id="@+id/restaurantAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:text="@{restaurantData.address}"
+                android:text="@{movieData.overview.trim()}"
                 android:textColor="@color/white"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@+id/restaurant_avt"
-                app:layout_constraintTop_toBottomOf="@+id/restaurant_name" />
+                app:layout_constraintLeft_toRightOf="@+id/restaurantAvt"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantName" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@ class DataStore {
             )
         )
         var currentUserData: MutableLiveData<MutableMap<String, String>> = MutableLiveData()
-
+        val curMovieData: MutableLiveData<MovieID> = MutableLiveData()
         val restaurantData: MutableLiveData<MutableList<Restaurant>> = MutableLiveData(
             mutableListOf(
                 Restaurant(

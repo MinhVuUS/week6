@@ -78,8 +78,16 @@
         android:name="com.example.week2.restaurant.RestaurantFragment"
         android:label="RestaurantFragment" >
         <action
+            android:id="@+id/action_restaurantFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
             android:id="@+id/action_restaurantFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.week2.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
 
 </navigation>
